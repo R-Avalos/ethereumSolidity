@@ -18,10 +18,5 @@ contract Inbox {
     }
     // changes message to newMessage, modifies data for message variable
     
-    function getMessage() public view returns (string) {
-        return message;
-    }
-    // getMesssage returns a view, does not modify, of message variable
-    // but this function is not needed! a public storage variable automatically creates a function to view
     
 }

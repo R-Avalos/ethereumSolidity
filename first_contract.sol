@@ -16,13 +16,11 @@ contract Inbox {
     function setMessage(string newMessage) public {
         message = newMessage;
     }
-    
-    // changes message to newMessage
+    // changes message to newMessage, modifies data for message variable
     
     function getMessage() public view returns (string) {
         return message;
     }
-    
-    // getMesssage returns a view of the variable messae
+    // getMesssage returns a view, does not modify, of message variable
     
 }

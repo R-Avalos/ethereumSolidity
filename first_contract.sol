@@ -22,5 +22,6 @@ contract Inbox {
         return message;
     }
     // getMesssage returns a view, does not modify, of message variable
+    // but this function is not needed! a public storage variable automatically creates a function to view
     
 }

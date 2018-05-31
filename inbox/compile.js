@@ -5,4 +5,4 @@ const solc = require('solc');
 const inboxPath = path.resolve(__dirname, 'contracts', 'inbox.sol'); // points directly to inbox.sol file
 const source = fs.readFileSync(inboxPath, 'utf8'); // read the file
 
-console.log(solc.compile(source, 1)); // location of files, and count of files to compiled... console log to see it in action
+module.exports = solc.compile(source, 1).contracts[':Inbox']; // the .contracts[':Inbox'] just pulls the bytecode

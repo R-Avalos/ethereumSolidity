@@ -374,7 +374,43 @@ deploy.js\
 contracts : inbox.solt\
 test: inbox.test.js\
 \
-Solidity compiler via nom\
+Solidity compiler via npm\
 Nom install \'97save solc\
 Don\'92t use require for inbox.sol with node (it\'92ll treat it as a javascript instead of solidity)\
+\
+
+\b Testing section
+\b0 \
+Testing\'85 we put it into the compiler and get the ABI and Bytecode\
+ 	We need to write functional tests (test functions in contract\
+1. Compile > bytecode > deploy contract to local test network on machine 
+\b Ganache
+\b0 /TestRPC\
+2. Compile > ABI > web3 > contract instance on Ganache\
+\
+Installing mocha, ganache, and web3\
+npm install --save mocha ganache-cli web3\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 npm install --save mocha ganache-cli web3@1.0.0-beta.26 //older version used in these demos\
+\
+
+\b \
+Web3
+\b0 \
+Javascript app and ethereum connection\
+Web3 Versioning issues: v0.x.x and v1.x.x\
+ 	V1 support for promises + async / await syntax (nice and pretty)\
+Beware of stackoverflow api calls for version0, as they are different using a lot of callback functions (hard to organize)\
+\
+Web3 contructor function to make INSTANCES of web3 library\
+ 	each instance is used to connect to an ethereum network (there can be multiple instances to connect to different test networks)\
+\
+        							Web3 Starts web3 instance\
+Ganache -> provider (communication layer) -> web3\
+    PersonA		Email				GroupB\
+\
+We need to plug in a provider into web3\
+\
+\
+\
 }

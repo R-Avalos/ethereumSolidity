@@ -471,4 +471,11 @@ ISSUE WITH WEB3 not showing up, solve by command line:
 
 \f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 Installs a better setup \
 \
-}
+
+\b befroreEach
+\b0  statement is used to execute some general initalitzatoin code for multiple tests.\
+ 	any logic entered will run beforeEach IT block. \
+ 		first block, initiates code in before each\
+		second IT block, re initiates code from before each\
+	if one sees the same setup code in each IT block, put it in beforeEach\
+	beware of scope with const s in functions\'85 so place the variable declaration outside }

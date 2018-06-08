@@ -478,4 +478,20 @@ ISSUE WITH WEB3 not showing up, solve by command line:
  		first block, initiates code in before each\
 		second IT block, re initiates code from before each\
 	if one sees the same setup code in each IT block, put it in beforeEach\
-	beware of scope with const s in functions\'85 so place the variable declaration outside }
+	beware of scope with const s in functions\'85 so place the variable declaration outside \
+\
+
+\b Testing Contracts with Mocha
+\b0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2018-06-08 at 10.00.01 AM.png \width9500 \height6940
+}¬}\
+- deploy new contract to ganache test network (beforeEach = deploy a new contract)\
+- write some code to manipulate contract (manipulations will be slightly different for each assertions, so place in IT block)\
+- make an assertion for a value tied to the contract (assertions go inside it blocks)\
+- rinse and repeat\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+}

@@ -20,11 +20,18 @@ beforeEach(async () => {
 		.deploy({data: bytecode, arguments: ['Hi there!']})
 		.send({from: accounts[0], gas: '1000000' });
 	
-	inbox.setProvivder(provider);
+	inbox.setProvider(provider);
 });
 
 describe('Inbox', () => {
 	it('deploys a contract', () => {
 		assert.ok(inbox.options.address); // Determine if address has been set for contract
 	});
+
+	it('has a default message', async () => {
+		// Call method "message" from contract, fast but still async
+										 //.messsage('arguments').call('object specifications')
+		const message = await inbox.methods.message().call() //call message method from inbox, save to message in test
+		assert.equal(message, 'Hi there!') // this test can break if hi there is not a common variable
+	})
 });  // just putting in a dummy test to have the task complete with console log

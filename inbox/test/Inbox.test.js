@@ -9,7 +9,7 @@ console.log('Web3 version ' + web3.version); //list web3 version
 let inbox; // predefine inbox
 let accounts; // predefine accounts variable
 
-beforeEach(async () => {
+beforeEach(async () => { 
 	// Get a list of all accounts
 	accounts = await web3.eth.getAccounts();
 	
@@ -20,6 +20,6 @@ beforeEach(async () => {
 
 describe('Inbox', () => {
 	it('deploys a contract', () => {
-		console.log(inbox);
+		assert.ok(inbox.options.address); // Deteremine if address has been set for contract
 	});
 });  // just putting in a dummy test to have the task complete with console log

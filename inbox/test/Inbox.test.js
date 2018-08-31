@@ -31,7 +31,13 @@ describe('Inbox', () => {
 	it('has a default message', async () => {
 		// Call method "message" from contract, fast but still async
 										 //.messsage('arguments').call('object specifications')
-		const message = await inbox.methods.message().call() //call message method from inbox, save to message in test
-		assert.equal(message, 'Hi there!') // this test can break if hi there is not a common variable
+		const message = await inbox.methods.message().call(); //call message method from inbox, save to message in test
+		assert.equal(message, 'Hi there!'); // this test can break if hi there is not a common variable
 	})
+
+	it('can change the message', async ()=> {
+		await inbox.methods.setMessage("I change the message!").send({ from: accounts[0] }); // send({who pays for the change})
+		const message = await inbox.methods.message().call();
+		assert.equal(message, "I change the message!");
+	});
 });  // just putting in a dummy test to have the task complete with console log
